@@ -10,6 +10,10 @@
   </p>
 </p>
 
+## Example
+
+Online example: https://snack.expo.io/@moh3n95/react-native-dynamic-render
+
 ## Installation
 
 ```
