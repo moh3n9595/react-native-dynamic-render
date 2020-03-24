@@ -1,4 +1,4 @@
-# react-native-dynamic-render &middot; [![Circle CI](https://circleci.com/gh/moh3n9595/react-native-dynamic-render/tree/master.svg?style=shield)](https://circleci.com/gh/moh3n9595/react-native-dynamic-render) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/moh3n9595/react-native-dynamic-render/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-orange.svg)](https://github.com/moh3n9595/react-native-dynamic-render/compare)
+# react-native-dynamic-render &middot; [![Circle CI](https://circleci.com/gh/moh3n9595/react-native-dynamic-render/tree/master.svg?style=shield)](https://circleci.com/gh/moh3n9595/react-native-dynamic-render) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/moh3n9595/react-native-dynamic-render/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-orange.svg)](https://github.com/moh3n9595/react-native-dynamic-render/compare) [![codecov](https://codecov.io/gh/moh3n9595/react-native-dynamic-render/branch/master/graph/badge.svg)](https://codecov.io/gh/moh3n9595/react-native-dynamic-render)
 
 
 
