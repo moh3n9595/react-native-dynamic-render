@@ -1,0 +1,13 @@
+{
+  "transform": {
+    "^.+\\.(js|ts|tsx)$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+  },
+  "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+  "moduleFileExtensions": [
+    "ts",
+    "js",
+    "tsx"
+  ],
+  "collectCoverage": true,
+  "preset": "react-native"
+}

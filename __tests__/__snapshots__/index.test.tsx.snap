@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`1-depth not found component renders correctly 1`] = `
+<Text>
+  The component foo has not been created yet.
+</Text>
+`;
+
+exports[`1-depth renders correctly 1`] = `<View />`;
+
+exports[`1-depth without _uid renders correctly 1`] = `<View />`;
+
+exports[`n-depth not found component renders correctly 1`] = `
+<View>
+  <Text />
+  <Text />
+  <View>
+    <Text>
+      The component foo has not been created yet.
+    </Text>
+    <Text />
+  </View>
+</View>
+`;
+
+exports[`n-depth renders correctly 1`] = `
+<View>
+  <Text />
+  <Text />
+  <View
+    first="view foo"
+    second="view bar"
+  >
+    <Text
+      first="text foo"
+      second="text bar"
+    >
+      some foo bar
+    </Text>
+    <Text />
+  </View>
+</View>
+`;
