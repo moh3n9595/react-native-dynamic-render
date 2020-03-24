@@ -10,7 +10,7 @@
     "lint": "./node_modules/.bin/eslint *.ts",
     "prettier-write": "./node_modules/.bin/prettier --write \"*.ts\"",
     "prettier-check": "./node_modules/.bin/prettier --check \"*.ts\"",
-    "codecov": "./node_modules/.bin/codecov -t 6fc5b4e4-4e80-42dd-b9ed-057a670de47a"
+    "codecov": "./node_modules/.bin/codecov -t 2aa603f2-8a1d-4358-b86c-5411412a8242"
   },
   "repository": {
     "type": "git",
