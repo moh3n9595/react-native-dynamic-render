@@ -1,7 +1,7 @@
 import React from "react";
 import { Text } from "react-native";
 import { ComponentDataInterface, MapComponentsInterface } from "./types";
-import propsMap from "./PropsMap";
+import propsMap from "./propsMap";
 
 // @ts-ignore
 import uuid from "react-uuid";
