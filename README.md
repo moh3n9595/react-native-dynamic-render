@@ -10,11 +10,11 @@
   </p>
 </p>
 
-## Example
+## Examples
 
-Online simple example: https://snack.expo.io/@moh3n95/react-native-dynamic-render
+- Online simple example: https://snack.expo.io/@moh3n95/react-native-dynamic-render
 
-Online advanced example: https://snack.expo.io/@moh3n95/react-navigation-dynamic-render
+- Online advanced example: https://snack.expo.io/@moh3n95/react-navigation-dynamic-render
 
 ## Installation
 
