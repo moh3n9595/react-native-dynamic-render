@@ -1,12 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`1-depth map props renders correctly 1`] = `
-<View>
-  <Text />
-</View>
+<Text>
+  some tests
+</Text>
 `;
-
-exports[`1-depth map undefined props renders correctly 1`] = `<View />`;
 
 exports[`1-depth not found component renders correctly 1`] = `
 <Text>
@@ -17,6 +15,14 @@ exports[`1-depth not found component renders correctly 1`] = `
 exports[`1-depth renders correctly 1`] = `<View />`;
 
 exports[`1-depth without _uid renders correctly 1`] = `<View />`;
+
+exports[`n-depth map props renders correctly 1`] = `
+<View>
+  <Text>
+    some tests
+  </Text>
+</View>
+`;
 
 exports[`n-depth not found component renders correctly 1`] = `
 <View>

@@ -7,9 +7,9 @@ export default function propsMap(
     ): ComponentDataInterface["props"] {
     if (!mappableProps?.length)
         return props;
-    mappableProps.forEach((mappableProps)=>{
+    mappableProps.forEach((mappableProp)=>{
         if(props) {
-            props[mappableProps] = mapComponents[props[mappableProps]];
+            props[mappableProp] = mapComponents[props[mappableProp]];
         }
     });
 

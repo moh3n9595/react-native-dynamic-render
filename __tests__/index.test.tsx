@@ -3,10 +3,12 @@ import DynamicComponent from "../index";
 import renderer from "react-test-renderer";
 import { Text, View } from "react-native";
 
-const ComponentViewer: React.ComponentType = ({ component }: PropsWithChildren<{ component: React.ComponentType }>): React.ReactElement => {
-    const CustomComponent = component;
+const ComponentViewer = (props: PropsWithChildren<{ component: React.ComponentType }>): React.ReactElement => {
+    const CustomComponent = props.component;
     return (
-        <CustomComponent />
+        <CustomComponent>
+            {props.children}
+        </CustomComponent>
     );
 };
 
@@ -19,40 +21,53 @@ const mapComponents = {
 test("1-depth map props renders correctly", () => {
 
     const props = {
-        name: "view",
-        children: [
-            { 
-                name: "componentViewer",
-                props: {
-                    component: "text"
-                },
-                mappableProps: ["component"]
-            }
-        ],
+        name: "componentViewer",
+        props: {
+            component: "text",
+        },
+        mappableProps: ["component"],
+        children: "some tests"
     };
 
     const tree = renderer.create(
+        <>
         <DynamicComponent
             {...props}
             mapComponents={mapComponents}
         />
+        </>
     ).toJSON();
 
     expect(tree).toMatchSnapshot();
 });
 
-test("1-depth map undefined props renders correctly", () => {
+test("n-depth map props renders correctly", () => {
 
     const props = {
-        name: "view",
-        mappableProps: ["componentViewer"]
+        name: "componentViewer",
+        props: {
+            component: "view",
+        },
+        mappableProps: ["component"],
+        children: [
+            {
+                name: "componentViewer",
+                props: {
+                    component: "text"
+                },
+                mappableProps: ["component"],
+                children: "some tests"
+            }
+        ]
     };
 
     const tree = renderer.create(
-        <DynamicComponent
-            {...props}
-            mapComponents={mapComponents}
-        />
+        <>
+            <DynamicComponent
+                {...props}
+                mapComponents={mapComponents}
+            />
+        </>
     ).toJSON();
 
     expect(tree).toMatchSnapshot();
