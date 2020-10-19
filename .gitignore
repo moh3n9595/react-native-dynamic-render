@@ -70,5 +70,14 @@ typings/
 # CI/CD
 
 
-# IDEA
+# VS Code
 .vscode
+
+# IDEA
+build/
+.idea
+*.iml
+
+# Lock Files
+package-lock.json
+yarn.lock

@@ -17,22 +17,24 @@
 - Online advanced example: https://snack.expo.io/@moh3n95/react-navigation-dynamic-render
 
 ## Installation
-
+```
+yarn add react-native-dynamic-render
+```
+or
 ```
 npm i react-native-dynamic-render
 ```
 
 ## Usage
 
-```
-
+```jsx
 import DynamicComponent from "react-native-dynamic-render";
 import { Text, View } from "react-native";
 
 export default function App() {
 
   const mapComponents = {
-    text: Text, // Or Your custom component
+    text: Text, /* Or Your custom component */
     view: View
   };
 
@@ -81,16 +83,13 @@ export default function App() {
         {...props}
         mapComponents={mapComponents}
     />
-  );
-  
+  ); 
 }
-
-
 ```
 
 ### Expected output
 
-```
+```tsx
 <View>
   <Text />
   <Text />
