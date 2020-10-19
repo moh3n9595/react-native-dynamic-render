@@ -8,8 +8,9 @@ export default function propsMap(
     if (!mappableProps?.length)
         return props;
     mappableProps.forEach((mappableProps)=>{
-        if(props)
-            props[mappableProps] = mapComponents[mappableProps];
+        if(props) {
+            props[mappableProps] = mapComponents[props[mappableProps]];
+        }
     });
 
     return props;

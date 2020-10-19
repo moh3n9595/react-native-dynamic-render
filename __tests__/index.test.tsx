@@ -20,10 +20,15 @@ test("1-depth map props renders correctly", () => {
 
     const props = {
         name: "view",
-        props: {
-            component: "componentViewer"
-        },
-        mappableProps: ["componentViewer"]
+        children: [
+            { 
+                name: "componentViewer",
+                props: {
+                    component: "text"
+                },
+                mappableProps: ["component"]
+            }
+        ],
     };
 
     const tree = renderer.create(
