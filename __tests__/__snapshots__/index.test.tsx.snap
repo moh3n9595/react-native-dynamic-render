@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`1-depth map props renders correctly 1`] = `
+<View
+  component="componentViewer"
+  componentViewer={[Function]}
+/>
+`;
+
+exports[`1-depth map undefined props renders correctly 1`] = `<View />`;
+
 exports[`1-depth not found component renders correctly 1`] = `
 <Text>
   The component foo has not been created yet.

@@ -1,6 +1,7 @@
 import React from "react";
 import { Text } from "react-native";
 import { ComponentDataInterface, MapComponentsInterface } from "./types";
+import propsMap from "./PropsMap";
 
 // @ts-ignore
 import uuid from "react-uuid";
@@ -8,9 +9,12 @@ import uuid from "react-uuid";
 export default function ComponentMap(componentData: ComponentDataInterface & { mapComponents: MapComponentsInterface }): React.ReactElement {
     if (typeof componentData.mapComponents[componentData.name] !== "undefined") {
         const CustomComponent: React.ComponentType = componentData.mapComponents[componentData.name];
+
+        const mappedProps = propsMap(componentData.props, componentData.mappableProps, componentData.mapComponents);
+
         return (
             <CustomComponent
-                {...componentData.props}
+                {...mappedProps}
                 key={componentData._uid || uuid()}
             >
                 {typeof componentData.children === "string" && componentData.children}

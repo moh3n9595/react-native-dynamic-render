@@ -1,5 +1,6 @@
 export interface ComponentDataInterface {
-  props?: any;
+  props?: Record<string, any>;
+  mappableProps?: Array<keyof ComponentDataInterface["props"]>;
   _uid?: string;
   name: string;
   children?: Array<ComponentDataInterface> | string;

@@ -1,12 +1,57 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 import DynamicComponent from "../index";
 import renderer from "react-test-renderer";
 import { Text, View } from "react-native";
 
-const mapComponents = {
-    text: Text,
-    view: View
+const ComponentViewer: React.ComponentType = ({ component }: PropsWithChildren<{ component: React.ComponentType }>): React.ReactElement => {
+    const CustomComponent = component;
+    return (
+        <CustomComponent />
+    );
 };
+
+const mapComponents = {
+    componentViewer: ComponentViewer,
+    text: Text,
+    view: View,
+};
+
+test("1-depth map props renders correctly", () => {
+
+    const props = {
+        name: "view",
+        props: {
+            component: "componentViewer"
+        },
+        mappableProps: ["componentViewer"]
+    };
+
+    const tree = renderer.create(
+        <DynamicComponent
+            {...props}
+            mapComponents={mapComponents}
+        />
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+});
+
+test("1-depth map undefined props renders correctly", () => {
+
+    const props = {
+        name: "view",
+        mappableProps: ["componentViewer"]
+    };
+
+    const tree = renderer.create(
+        <DynamicComponent
+            {...props}
+            mapComponents={mapComponents}
+        />
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+});
 
 test("1-depth renders correctly", () => {
 
