@@ -46,7 +46,7 @@
     "jest": "^25.1.0",
     "prettier": "1.19.1",
     "react": "^16.13.1",
-    "react-native": "^0.61.5",
+    "react-native": "^0.62.3",
     "react-test-renderer": "^16.13.1",
     "ts-jest": "^22.4.1",
     "typescript": "^3.7.5"
